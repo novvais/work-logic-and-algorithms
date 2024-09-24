@@ -8,39 +8,39 @@ c) retorne quantas vezes o valor de referência aparece no vetor.*/
 #include <stdio.h>
 
 int main() {
-    int vetor[3], ref, cont;    
+    int vetor[10], ref, cont = 0;    
 
     printf("Escreva um valor referencia: ");
     scanf(" %d", &ref);
 
-    for(int i = 0; i < 3; i++) {
+    for(int i = 0; i < 10; i++) {
         printf("Escreva um numero: ");
         scanf(" %d", &vetor[i]);
     }
 
     printf("Numeros maiores que o valor de referencia: ");
 
-    for(int i = 0; i < 3; i++) {
+    for(int i = 0; i < 10; i++) {
         if(vetor[i] > ref) {
-            printf("Tem %d numeros maiores que o valor de referencia \n", vetor[i]);
+            printf(" %d", vetor[i]);
         } 
     }
 
-    printf("Numeros menores que o valor de referencia: ");
+    printf("\nNumeros menores que o valor de referencia: ");
 
-    for(int i = 0; i < 3; i++) {
+    for(int i = 0; i < 10; i++) {
         if(vetor[i] < ref){
             printf(" %d", vetor[i]);
         }
     }
 
-    for(int i = 0; i < 3; i++) {
+    for(int i = 0; i < 10; i++) {
         if(vetor[i] == ref) {
             cont++;
         }
     }
 
-    printf("\n Apareceram %d numeros no vetor igual ao numero de referencia", cont);
+    printf("\nApareceram %d numeros no vetor igual ao numero de referencia", cont);
     
     return 0;
 }
